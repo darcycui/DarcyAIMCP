@@ -13,6 +13,3 @@ STDERR: Processing request of type ListResourceTemplatesRequest
 输入: {"method":"prompts/list","jsonrpc":"2.0","id":4}
 STDERR: Processing request of type ListPromptsRequest
 输出: {"jsonrpc":"2.0","id":4,"result":{"prompts":[]}}
-输入: {"method":"tools/call","params":{"name":"get_forecast","arguments":{"city":"北京"}},"jsonrpc":"2.0","id":5}
-STDERR: Processing request of type CallToolRequest
-输出: {"jsonrpc":"2.0","id":5,"result":{"content":[{"type":"text","text":"北京 明天的天气晴转多云，最低气温 1度。"}],"structuredContent":{"result":"北京 明天的天气晴转多云，最低气温 1度。"},"isError":false}}
