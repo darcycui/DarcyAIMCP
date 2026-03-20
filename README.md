@@ -8,8 +8,9 @@ Python语言，基于 mcp 库实现的一个 MCP-Server。
 
 ## 怎么用
 
-VSCode + Cline插件
-添加如下配置
+### MCP使用
+添加如下 mcpServers 配置
+以 VSCode + Cline插件 为例
 
 ```json
 {
@@ -17,21 +18,41 @@ VSCode + Cline插件
     "weather": {
       "autoApprove": [],
       "disabled": false,
-      "timeout": 30,
+      "timeout": 60,
       "type": "stdio",
-      "command": "python",
+      "command": "uvx",
       "args": [
-        "D:\\Projectss\\AI\\DarcyMCP\\DarcyMCP\\mcp_logger.py",
-        "uv",
+        "darcycui-mcp"
+      ]
+    }
+  }
+}
+
+```
+### 本地使用
+1. clone项目到本地 path
+2. 添加如下配置
+```json
+{
+  "mcpServers": {
+    "weather": {
+      "autoApprove": [],
+      "disabled": true,
+      "timeout": 60,
+      "type": "stdio",
+      "command": "uv",
+      "args": [
         "--directory",
-        "D:\\Projectss\\AI\\DarcyMCP\\DarcyMCP",
+        "path\\src\\darcycui_mcp",
         "run",
         "weather.py"
       ]
     }
   }
 }
+
 ```
+
 
 ## 运行结果
 ![运行结果](docs/MCP-Server运行效果2.png)
