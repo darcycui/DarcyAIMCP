@@ -34,7 +34,7 @@ VSCode + Cline插件
 ```
 
 ## 运行结果
-![运行结果](MCP-Server运行效果.png)
+![运行结果](docs/MCP-Server运行效果2.png)
 
 ## 参考文章
 

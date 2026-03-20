@@ -5,7 +5,7 @@ STDERR: Creating virtual environment at: .venv
 STDERR: warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.
 STDERR:          If the cache and target directories are on different filesystems, hardlinking may not be supported.
 STDERR:          If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.
-STDERR: Installed 31 packages in 4.19s
+STDERR: Installed 31 packages in 4.38s
 输出: {"jsonrpc":"2.0","id":0,"result":{"protocolVersion":"2025-11-25","capabilities":{"experimental":{},"prompts":{"listChanged":false},"resources":{"subscribe":false,"listChanged":false},"tools":{"listChanged":false}},"serverInfo":{"name":"weather","version":"1.26.0"}}}
 输入: {"method":"notifications/initialized","jsonrpc":"2.0"}
 输入: {"method":"tools/list","jsonrpc":"2.0","id":1}
@@ -20,3 +20,6 @@ STDERR: Processing request of type ListResourceTemplatesRequest
 输入: {"method":"prompts/list","jsonrpc":"2.0","id":4}
 STDERR: Processing request of type ListPromptsRequest
 输出: {"jsonrpc":"2.0","id":4,"result":{"prompts":[]}}
+输入: {"method":"tools/call","params":{"name":"get_forecast","arguments":{"city":"北京","task_progress":"- [x] 分析需求：查询北京明天的天气\n- [ ] 使用天气工具获取信息\n- [ ] 整理并展示天气信息"}},"jsonrpc":"2.0","id":5}
+STDERR: Processing request of type CallToolRequest
+输出: {"jsonrpc":"2.0","id":5,"result":{"content":[{"type":"text","text":"北京 明天的天气晴转多云，最低气温 1度。"}],"structuredContent":{"result":"北京 明天的天气晴转多云，最低气温 1度。"},"isError":false}}

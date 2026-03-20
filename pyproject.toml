@@ -1,9 +1,33 @@
 [project]
-name = "darcymcp"
-version = "0.1.0"
-description = "Add your description here"
+name = "darcycui-mcp"
+version = "1.0.1"
+description = "A weather forecast MCP Server for any AI agent."
 readme = "README.md"
+license = {file = "LICENSE"}
 requires-python = ">=3.12"
 dependencies = [
-    "mcp>=1.26.0",
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.26.0",
 ]
+authors = [
+    { name = "Darcycui", email = "darcycui@msn.cn" }
+]
+keywords = ["mcp", "server", "api"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3.12",
+]
+[project.urls]
+Homepage = "https://github.com/darcycui/DarcyAIMCPServer"
+Repository = "https://github.com/darcycui/DarcyAIMCPServer"
+Issues = "https://github.com/darcycui/DarcyAIMCPServer/issues"
+
+[project.scripts]
+darcycui-mcp = "darcycui_mcp.weather:main"
+
+[build-system]
+requires = ["uv_build>=0.10.9,<0.11.0"]
+build-backend = "uv_build"
+
