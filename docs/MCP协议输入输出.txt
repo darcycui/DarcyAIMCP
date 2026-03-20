@@ -1,0 +1,29 @@
+输入: {"method":"initialize","params":{"protocolVersion":"2025-11-25","capabilities":{},"clientInfo":{"name":"Cline","version":"3.71.0"}},"jsonrpc":"2.0","id":0}
+输出: {"jsonrpc":"2.0","id":0,"result":{"protocolVersion":"2025-11-25","capabilities":{"experimental":{},"prompts":{"listChanged":false},"resources":{"subscribe":false,"listChanged":false},"tools":{"listChanged":false}},"serverInfo":{"name":"FastMCP","version":"1.26.0"}}}
+
+输入: {"method":"notifications/initialized","jsonrpc":"2.0"}
+输入: {"method":"tools/list","jsonrpc":"2.0","id":1}
+STDERR: Processing request of type ListToolsRequest
+
+输出: {"jsonrpc":"2.0","id":1,"result":{"tools":[{"name":"get_forecast","description":"\n    获取天气信息\n    :param city: 城市名称\n    :return: 天气信息\n    ","inputSchema":{"properties":{"city":{"title":"City","type":"string"}},"required":["city"],"title":"get_forecastArguments","type":"object"},"outputSchema":{"properties":{"result":{"title":"Result","type":"string"}},"required":["result"],"title":"get_forecastOutput","type":"object"}}]}}
+
+输入: {"method":"resources/list","jsonrpc":"2.0","id":2}
+STDERR: Processing request of type ListResourcesRequest
+
+输出: {"jsonrpc":"2.0","id":2,"result":{"resources":[]}}
+
+输入: {"method":"resources/templates/list","jsonrpc":"2.0","id":3}
+STDERR: Processing request of type ListResourceTemplatesRequest
+
+输出: {"jsonrpc":"2.0","id":3,"result":{"resourceTemplates":[]}}
+
+输入: {"method":"prompts/list","jsonrpc":"2.0","id":4}
+STDERR: Processing request of type ListPromptsRequest
+
+输出: {"jsonrpc":"2.0","id":4,"result":{"prompts":[]}}
+
+输入: {"method":"tools/call","params":{"name":"get_forecast","arguments":{"city":"北京"}},"jsonrpc":"2.0","id":5}
+STDERR: Processing request of type CallToolRequest
+
+输出: {"jsonrpc":"2.0","id":5,"result":{"content":[{"type":"text","text":"北京 明天的天气晴转多云，最低气温 1度。"}],"structuredContent":{"result":"北京 明天的天气晴转多云，最低气温 1度。"},"isError":false}}
+
