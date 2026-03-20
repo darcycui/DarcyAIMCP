@@ -33,7 +33,7 @@ def forecast(city: str) -> str:
         if weather.error_code != 0:
             return "查询失败，返回本地默认值: 明天的天气晴转多云，最低气温 1度。"
         # 转换为 JSON 字符串
-        return weather.result.future[0].model_dump_json()
+        return weather.result.future[1].model_dump_json()
     except Exception as e:
         print(f"查询异常：{e}")
         # 打印堆栈
